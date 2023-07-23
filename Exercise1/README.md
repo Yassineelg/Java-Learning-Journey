@@ -25,6 +25,18 @@ During this exercise, I learned how to:
 - Create objects using the `new` keyword.
 - Access and print field values in the console.
 
+## Bonus
+
+For an additional bonus, I have implemented user interaction using the `Scanner` class. Now, the application allows users to enter their name and account number during runtime. This enhances the user experience by personalizing the account information.
+
+### Learning - Bonus Features
+
+In this bonus section, I learned how to:
+
+-   Utilize the `Scanner` class to read user input in Java.
+-   Prompt the user for information and store the provided values in variables.
+-   Use the entered data to create a personalized `BankAccount` object.
+
 ## Next Steps
 
 I will proceed to the next exercise and continue practicing Java programming concepts.

@@ -27,15 +27,19 @@ During this exercise, I learned how to:
 
 ## Bonus
 
-For an additional bonus, I have implemented user interaction using the `Scanner` class. Now, the application allows users to enter their name and account number during runtime. This enhances the user experience by personalizing the account information.
+During the course of this exercise, I went beyond the requirements and implemented the following additional features:
+
+- Implemented user interaction using the `Scanner` class, allowing users to enter their name and desired password during runtime to create a personalized bank account.
+- Generated a random 8-digit account number for each new account created, enhancing security and uniqueness.
+- Saved the account information, including account number, account holder name, password, and initial balance, to a file named "accounts.txt" for future access and record-keeping.
 
 ### Learning - Bonus Features
 
 In this bonus section, I learned how to:
 
 -   Utilize the `Scanner` class to read user input in Java.
--   Prompt the user for information and store the provided values in variables.
--   Use the entered data to create a personalized `BankAccount` object.
+-   Implemented random 8-digit number generation.
+-   Saved data sequentially to a named file.
 
 ## Next Steps
 

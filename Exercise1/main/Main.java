@@ -8,13 +8,23 @@
 package main;
 
 import bank.BankAccount;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        BankAccount account = new BankAccount(123456789, "Bob TheBuilder", 1000.0);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Account Number: " + account.getAccountNumber());
-        System.out.println("Account Holder: " + account.getAccountHolder());
-        System.out.println("Balance: " + account.getBalance());
+        System.out.print("Enter your name: ");
+        String accountHolder = scanner.nextLine();
+
+        System.out.print("Enter your account number: ");
+        int accountNumber = scanner.nextInt();
+
+        BankAccount bankAccount = new BankAccount(accountNumber, accountHolder, 1000.0);
+        System.out.println("Account Number: " + bankAccount.getAccountNumber());
+        System.out.println("Account Holder: " + bankAccount.getAccountHolder());
+        System.out.println("Balance: " + bankAccount.getBalance());
+
+        scanner.close();
     }
 }

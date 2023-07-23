@@ -7,6 +7,10 @@
 
 package bank;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Random;
+
 public class BankAccount {
     private int accountNumber;
     private String accountHolder;
@@ -42,5 +46,20 @@ public class BankAccount {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    public static void createAccount(String accountHolder, String password) {
+        Random random = new Random();
+        int accountNumber = random.nextInt(90000000) + 10000000;
+        double balance = 0.00;
+
+        try {
+            FileWriter writer = new FileWriter("accounts.txt", true);
+            writer.write(accountNumber + "," + accountHolder + "," + password + "," + balance + "\n");
+            writer.close();
+            System.out.println("Account created successfully! Your account number is: " + accountNumber);
+        } catch (IOException e) {
+            System.out.println("An error occurred while saving the account information.");
+        }
     }
 }

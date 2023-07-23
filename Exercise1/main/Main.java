@@ -13,18 +13,57 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        boolean running = true;
 
-        System.out.print("Enter your name: ");
-        String accountHolder = scanner.nextLine();
+        System.out.println("Welcome to the Basic Bank Account Application!");
 
-        System.out.print("Enter your account number: ");
-        int accountNumber = scanner.nextInt();
+        while(running) {
+            System.out.println("Choose an option:");
+            System.out.println("1. Create an account");
+            System.out.println("2. Delete an account");
+            System.out.println("3. Access an account");
+            System.out.println("4. Exit");
 
-        BankAccount bankAccount = new BankAccount(accountNumber, accountHolder, 1000.0);
-        System.out.println("Account Number: " + bankAccount.getAccountNumber());
-        System.out.println("Account Holder: " + bankAccount.getAccountHolder());
-        System.out.println("Balance: " + bankAccount.getBalance());
+            if (scanner.hasNextInt()) {
+                int choice = scanner.nextInt();
+                scanner.nextLine();
 
+                switch (choice) {
+                    case 1:
+                        System.out.print("Enter your name: ");
+                        String accountHolder = scanner.nextLine();
+
+                        System.out.print("Enter your desired password: ");
+                        String password = scanner.nextLine();
+
+                        BankAccount.createAccount(accountHolder, password);
+                        break;
+
+                    case 2:
+                        // Delete an account
+                        // Implement this part later
+
+                        break;
+
+                    case 3:
+                        // Access an account
+                        // Implement this part later
+
+                        break;
+
+                    case 4:
+                        running = false;
+                        break;
+
+                    default:
+                        System.out.println("Invalid choice. Please choose a valid option (1, 2, 3 or 4).");
+                }
+            }
+            else {
+                System.out.println("Invalid input. Please enter a valid integer choice.");
+                scanner.nextLine();
+            }
+        }
         scanner.close();
     }
 }

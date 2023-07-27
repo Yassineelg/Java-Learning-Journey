@@ -31,15 +31,17 @@ During the course of this exercise, I went beyond the requirements and implement
 
 - Implemented user interaction using the `Scanner` class, allowing users to enter their name and desired password during runtime to create a personalized bank account.
 - Generated a random 8-digit account number for each new account created, enhancing security and uniqueness.
-- Saved the account information, including account number, account holder name, password, and initial balance, to a file named "accounts.txt" for future access and record-keeping.
+- Saved the account information, including account number, account holder name, hashed password with salt, and initial balance, to a file named "accounts.txt" for future access and record-keeping.
 
 ### Learning - Bonus Features
 
 In this bonus section, I learned how to:
 
--   Utilize the `Scanner` class to read user input in Java.
--   Implemented random 8-digit number generation.
--   Saved data sequentially to a named file.
+- Utilize the `Scanner` class to read user input in Java.
+- Implemented random 8-digit number generation.
+- Implement password hashing with salt using the PBKDF2 algorithm for enhanced security.
+- Generate and use random salts to protect against dictionary attacks.
+- Save data sequentially to a named file for persistent storage.
 
 ## Next Steps
 
